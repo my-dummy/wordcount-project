@@ -1,0 +1,18 @@
+<h2> There are {{ wordcount }} word(s) in your text </h2>
+
+In case you wanna try another input-
+
+<a href="{% url 'home' %}"> Click here </a>
+
+<h3> Your Original Text: </h3>
+
+{{ fulltext }}
+
+<h2> List of Sorted Words </h2>
+
+{% for word,countotal in sortedwords %}
+
+{{ word }} - {{ countotal }}
+<br>
+
+{% endfor %}
